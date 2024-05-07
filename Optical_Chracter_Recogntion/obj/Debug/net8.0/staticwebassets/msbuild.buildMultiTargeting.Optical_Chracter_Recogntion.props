@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Optical_Chracter_Recogntion.props" />
+</Project>
