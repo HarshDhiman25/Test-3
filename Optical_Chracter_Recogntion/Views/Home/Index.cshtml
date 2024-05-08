@@ -1,10 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Upload Image";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Upload Image</h1>
+<h1>OCR</h1>
 
-<form method="post" enctype="multipart/form-data">
+<form asp-action="Index" enctype="multipart/form-data" method="post">
     <input type="file" name="image" />
-    <button type="submit">Upload Image</button>
+    <button type="submit">Upload</button>
 </form>
+<br/>
+
+
+@if (!string.IsNullOrEmpty(ViewBag.ImagePath))
+{
+    <div>
+        <img src="@Url.Content("~/uploads/" + ViewBag.ImagePath)" alt="Uploaded Image" />
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ExtractedText))
+{
+    <div>
+        <h2>Extracted Text:</h2>
+        <p>@ViewBag.ExtractedText</p>
+    </div>
+}
