@@ -1,4 +1,14 @@
-﻿<div>
-    <h2>Extracted Text</h2>
-    <pre>@ViewBag.ExtractedText</pre>
-</div>
+﻿@{
+    ViewData["Title"] = "Extracted Text";
+}
+
+<h1>Extracted Text</h1>
+
+@if (!string.IsNullOrEmpty(ViewBag.ExtractedText))
+{
+    <p>@ViewBag.ExtractedText</p>
+}
+else
+{
+    <p>No text extracted.</p>
+}

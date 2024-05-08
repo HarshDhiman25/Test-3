@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\for intern\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj": {}
+    "E:\\Project\\Test-3\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj": {}
   },
   "projects": {
-    "E:\\for intern\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj": {
+    "E:\\Project\\Test-3\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\for intern\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj",
+        "projectUniqueName": "E:\\Project\\Test-3\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj",
         "projectName": "Optical_Chracter_Recogntion",
-        "projectPath": "E:\\for intern\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj",
+        "projectPath": "E:\\Project\\Test-3\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion.csproj",
         "packagesPath": "C:\\Users\\Sunny\\.nuget\\packages\\",
-        "outputPath": "E:\\for intern\\Optical_Chracter_Recogntion\\Optical_Chracter_Recogntion\\obj\\",
+        "outputPath": "E:\\Project\\Test-3\\Optical_Chracter_Recogntion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,6 +75,10 @@
               "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
             },
