@@ -1,15 +1,16 @@
-﻿@{
+﻿@model ErrorViewModel
+@{
     ViewData["Title"] = "Index";
 }
 
 <h1>OCR</h1>
 
 <form asp-action="Index" enctype="multipart/form-data" method="post">
-    <input type="file" name="image" />
+    <input type="file" name="image" min="40KB" />
+    <span class="text-danger">@Html.ValidationMessage("image")</span>
     <button type="submit">Upload</button>
 </form>
-<br/>
-
+<br />
 
 @if (!string.IsNullOrEmpty(ViewBag.ImagePath))
 {
