@@ -1,4 +1,4 @@
-﻿@model ErrorViewModel
+﻿@* @model ErrorViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -25,4 +25,90 @@
         <h2>Extracted Text:</h2>
         <p>@ViewBag.ExtractedText</p>
     </div>
+}
+ *@
+@* @model ErrorViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>OCR</h1>
+
+<form id="uploadForm" asp-action="Index" enctype="multipart/form-data" method="post">
+    <input id="fileInput" type="file" name="image" min="40KB" />
+    <span class="text-danger">@Html.ValidationMessage("image")</span>
+    <button type="submit" id="uploadButton">Upload</button>
+</form>
+<br />
+
+@if (!string.IsNullOrEmpty(ViewBag.ImagePath))
+{
+    <div>
+        <img src="@Url.Content("~/uploads/" + ViewBag.ImagePath)" alt="Uploaded Image" />
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ExtractedText))
+{
+    <div>
+        <h2>Extracted Text:</h2>
+        <p>@ViewBag.ExtractedText</p>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        // Reset form after upload
+        document.getElementById('uploadButton').addEventListener('click', function () {
+            setTimeout(function () {
+                document.getElementById('uploadForm').reset();
+            }, 500);
+        });
+    </script>
+}
+
+ *@
+ @model ErrorViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>OCR</h1>
+
+<form id="uploadForm" asp-action="Index" enctype="multipart/form-data" method="post">
+    <input id="fileInput" type="file" name="image" min="40KB" />
+    <span class="text-danger">@Html.ValidationMessage("image")</span>
+    <button type="submit" id="uploadButton">Upload</button>
+</form>
+<br />
+
+@if (!string.IsNullOrEmpty(ViewBag.ImagePath))
+{
+    <div>
+        <img src="@Url.Content("~/uploads/" + ViewBag.ImagePath)" alt="Uploaded Image" />
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ExtractedText))
+{
+    <div>
+        <h2>Extracted Text:</h2>
+        <p>@ViewBag.ExtractedText</p>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        // Reset form after upload
+        document.getElementById('uploadButton').addEventListener('click', function () {
+            setTimeout(function () {
+                document.getElementById('uploadForm').reset();
+            }, 500);
+        });
+
+        // Reset file input when page is loaded again
+        window.onload = function () {
+            document.getElementById('fileInput').value = null;
+        };
+    </script>
 }

@@ -26,45 +26,8 @@ namespace Optical_Character_Recognition.Controllers
             return View();
         }
 
-        [HttpPost]
-        //public async Task<IActionResult> Index(IFormFile image)
-        //{
-        //    if (image != null && image.Length > 0)
-        //    {
-        //        try
-        //        {
-        //            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-
-        //            // Create directory if it doesn't exist
-        //            if (!Directory.Exists(uploadsFolder))
-        //            {
-        //                Directory.CreateDirectory(uploadsFolder);
-        //            }
-
-        //            var fileName = Path.GetRandomFileName() + Path.GetExtension(image.FileName);
-        //            var filePath = Path.Combine(uploadsFolder, fileName);
-
-        //            using (var fileStream = new FileStream(filePath, FileMode.Create))
-        //            {
-        //                await image.CopyToAsync(fileStream);
-        //            }
-
-        //            var extractedText = ExtractTextFromImage(filePath);
-
-
-        //            ViewBag.ImagePath = fileName;
-        //            ViewBag.ExtractedText = extractedText;
-
-        //            return View(); // Pass the model to the view
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            _logger.LogError($"Error uploading image: {ex.Message}");
-        //            return View("Error");
-        //        }
-        //    }
-        //    return RedirectToAction("Index");
-        //}
+     
+        
         [HttpPost]
         public async Task<IActionResult> Index(IFormFile image)
         {
@@ -174,10 +137,7 @@ namespace Optical_Character_Recognition.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
+       
 
 
         public IActionResult Error()
