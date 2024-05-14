@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Optical_Chracter_Recogntion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+420a84f6e5009f5e80fac031c3009c0bc3a23581")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f5c6ff37a79d54edce9a6ad6db16d68bf475b3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Optical_Chracter_Recogntion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Optical_Chracter_Recogntion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
